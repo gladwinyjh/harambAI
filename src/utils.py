@@ -153,6 +153,7 @@ def predict(model, url, saliency, guided_bp, grad_cam, device):
     
     if grad_cam:
         print(f'Getting Grad-CAM...')
+        # Generate superimposed image of Grad-CAM and input image
         superimposed_img = get_CAM.generate(image, model, idx_flattened[0], feature_maps, device)
         # Store Grad-CAM in dictionary
         plots['Grad-CAM'] = superimposed_img
