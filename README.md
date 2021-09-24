@@ -49,7 +49,7 @@ cd src
 
 
 -cuda or --cuda: Option to use cuda is available, defaults to False (use cpu)
-     action='store_true', default=False
+    - action='store_true', default=False
 ```
 <br>
 
