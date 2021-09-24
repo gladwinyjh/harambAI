@@ -141,19 +141,20 @@ def predict(model, url, saliency, guided_bp, grad_cam, device):
         # Extract first convolutional layer
         layer = model.model.conv1
         GBP = get_gbp.GuidedBackprop(model, layer)
+        # Generate gradient map
         guided_grads = GBP.generate(img_tensor, idx_flattened[0], device)
         # Normalize
         guided_grads = guided_grads - np.min(guided_grads)
         guided_grads = guided_grads / np.max(guided_grads)
         # Resize to input image size
         guided_grads = cv2.resize(guided_grads,(image.size[0], image.size[1]))
-        # Resize to input image size
+        # Store guided backprop map in dictionary
         plots['Guided Backpropagation'] = guided_grads
     
     if grad_cam:
         print(f'Getting Grad-CAM...')
         superimposed_img = get_CAM.generate(image, model, idx_flattened[0], feature_maps, device)
-        # Resize to input image size
+        # Store Grad-CAM in dictionary
         plots['Grad-CAM'] = superimposed_img
 
     top_pred = classes[idx_flattened[0]]
