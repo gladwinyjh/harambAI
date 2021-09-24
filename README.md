@@ -1,7 +1,7 @@
 <img src="assets/header.png" alt="Header" width=100%/>
 <hr>
 
-Why have a model learn 1000 classes when it can learn just 5? Are we really just 'a notch above a chimp'? 
+Why have a model learn 1000 classes when it can learn just 5? Are we really just 'a notch above chimps'? 
 
 harambAI is a pre-trained PyTorch Resnet50 model that was re-trained for the sole purpose of classifying the Apes:
 - Gibbon
@@ -17,23 +17,19 @@ harambAI is easy to use. Just give an image link of one of the Apes and choose a
 - Guided Backpropagation
 - Grad-CAM
 
-<br>
-
-## Getting Started <hr>
-### **Requirements**
+## Getting Started
+#### **Requirements**
 - Python 3.+
 - Create virtual env (optional)
-```console
-~$ git clone git@github.com:gladwinyjh/harambAI.git
-~$ cd harambAI
-~$ pip install -r requirements.txt
+```
+git clone git@github.com:gladwinyjh/harambAI.git
+cd harambAI
+pip install -r requirements.txt
 ```
 - For gpu usage, install the appropriate version for your cuda if not already set up. **Running on gpu is not necessary at all.**
 
-<br>
-
-### **Command Line Arguments**
-```console
+#### **Command Line Arguments**
+```
 -u or --url: Image address of image
     - Accepts most images by 'Copy image address' (Chrome) or 'Copy image link (Firefox)
     - type=str, required=True
@@ -54,46 +50,45 @@ harambAI is easy to use. Just give an image link of one of the Apes and choose a
 -cuda or --cuda: Option to use cuda is available, defaults to False (use cpu)
      action='store_true', default=False
 ```
-
 <br>
 
-## Examples <hr>
-```console
-~$ python main.py -u "https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/Hylobates_lar_-_Kaeng_Krachan_WB.jpg/800px-Hylobates_lar_-_Kaeng_Krachan_WB.jpg" -s -gbp -gc
+## Examples
+```
+python main.py -u "https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/Hylobates_lar_-_Kaeng_Krachan_WB.jpg/800px-Hylobates_lar_-_Kaeng_Krachan_WB.jpg" -s -gbp -gc
 ```
 <img src="assets/Gibbon.png" alt="Gibbon" width=100%/>
 
-<br><br>
+<br>
 
-```console
-~$ python main.py -u "https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Chimp_Serengeti_Park_2015_%28215379799%29.jpeg/800px-Chimp_Serengeti_Park_2015_%28215379799%29.jpeg" -s -gbp -gc
+```
+python main.py -u "https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Chimp_Serengeti_Park_2015_%28215379799%29.jpeg/800px-Chimp_Serengeti_Park_2015_%28215379799%29.jpeg" -s -gbp -gc
 ```
 <img src="assets/Chimpanzee.png" alt="Chimp" width=100%/>
 
-<br><br>
+<br>
 
-```console
-~$ python main.py -u "https://upload.wikimedia.org/wikipedia/commons/f/f5/Gorilla_gorilla06.jpg" -s -gbp -gc
+```
+python main.py -u "https://upload.wikimedia.org/wikipedia/commons/f/f5/Gorilla_gorilla06.jpg" -s -gbp -gc
 ```
 <img src="assets/Gorilla.png" alt="Gorilla" width=100%/>
 
-<br><br>
+<br>
 
-```console
-~$ python main.py -u "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Tapanuli_Orangutan_Amid_Threat_of_Extinction.jpg/800px-Tapanuli_Orangutan_Amid_Threat_of_Extinction.jpg" -s -gbp -gc
+```
+python main.py -u "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Tapanuli_Orangutan_Amid_Threat_of_Extinction.jpg/800px-Tapanuli_Orangutan_Amid_Threat_of_Extinction.jpg" -s -gbp -gc
 ```
 <img src="assets/Orangutan.png" alt="Orangutan" width=100%/>
 
-<br><br>
+<br>
 
-```console
-~$ python main.py -u "https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Man_in_forest_working.jpg/800px-Man_in_forest_working.jpg" -s -gbp -gc
+```
+python main.py -u "https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Man_in_forest_working.jpg/800px-Man_in_forest_working.jpg" -s -gbp -gc
 ```
 <img src="assets/Human.png" alt="Human" width=100%/>
 
-<br><br>
+<br>
 
-## References <hr>
+## References
 [1] Utku Ozbulak. (2019). PyTorch CNN Visualizations. https://github.com/utkuozbulak/pytorch-cnn-visualizations.
 
 Header and Demo images:
