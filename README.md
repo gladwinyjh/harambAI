@@ -25,6 +25,7 @@ harambAI is easy to use. Just give an image link of one of the Apes and choose a
 git clone git@github.com:gladwinyjh/harambAI.git
 cd harambAI
 pip install -r requirements.txt
+cd src
 ```
 - For gpu usage, install the appropriate version for your cuda if not already set up. **Running on gpu is not necessary at all.**
 
